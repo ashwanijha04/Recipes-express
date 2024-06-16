@@ -5,6 +5,12 @@ const recipesFilePath = path.join(__dirname, "../db/recipes.json"); // Contruct 
 
 const getAll = async () => JSON.parse(await fs.readFile(recipesFilePath))
 
+const getAllNames = async () => {
+  const recipes = await getAll();
+  return recipes.map(recipe => recipe.name);
+};
+
 module.exports = {
  getAll,
+ getAllNames
 };
