@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 
 app.use('/api/v1/recipes', recipesRouter);
 
-const port = process.env.PORT || 8080;
+const port = 8081;
 
 app.listen(port, () => {
   console.log(`Server is up on port ${port}.`);
