@@ -4,6 +4,17 @@ const app = express();
 
 const port = 8080;
 
+// The ________ functions 
+// alter the request and response 
+// objects in the request-response 
+// cycle of the application.
+
+// Static
+// HTTP
+// Route Handler
+// Middleware [Ans]
+
+
 
 var options = {
   dotfiles: 'ignore',

@@ -4,11 +4,11 @@ const { Strategy, ExtractJwt } = require("passport-jwt");
 
 const { find: findUser } = require("../services/users");
 
-// const { JWT_SECRET } = process.env;
+const { JWT_SECRET } = process.env;
 
-// if (!JWT_SECRET) {
-//   throw new Error('JWT_SECRET is not defined');
-// }
+if (!JWT_SECRET) {
+  throw new Error('JWT_SECRET is not defined');
+}
 const strategy = new Strategy(
   {
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
